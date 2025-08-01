@@ -1,0 +1,23 @@
+clc;
+close all;
+clear;
+f=50;
+T=1/f;
+rad45=45*(pi/180);
+rad135=135*(pi/180);
+
+t=linspace(0,2*T,100);
+v=10*sin((100*pi*t)+rad45);
+i=0.2*sin((100*pi*t)+rad135);
+subplot(2,2,1);
+plot(t,v);
+xlabel('Time(s)');
+ylabel ('Voltage(v)');
+title('Voltage Vs Time');
+grid on;
+subplot(2,2,2);
+plot(t,i);
+xlabel('Time(s)');
+ylabel ('Current(A)');
+title('Current Vs Time');
+grid on;
